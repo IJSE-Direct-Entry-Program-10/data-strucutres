@@ -46,6 +46,11 @@ public class SinglyLinkedList {
     }
 
     public boolean contains(String input) {
+        Node temp = head;
+        while (temp != null){
+            if (temp.data == Integer.parseInt(input)) return true;
+            temp = temp.next;
+        }
         return false;
     }
 
