@@ -26,7 +26,7 @@ public class SinglyLinkedList {
             data += temp.data + ", ";
             temp = temp.next;
         }
-        if (size != 0) data += "\b";
+        if (size != 0) data += "\b\b";
         data += "]";
         return data;
     }
