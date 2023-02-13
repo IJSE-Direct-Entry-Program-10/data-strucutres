@@ -59,6 +59,18 @@ public class SinglyLinkedList {
     }
 
     public void remove(int index) {
+        if (size == 0) return;
+
+        if (index == 0) {
+            head = head.next;
+        }else{
+            Node temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            if (index == size - 1) tail = temp;
+        }
         size--;
     }
 }
