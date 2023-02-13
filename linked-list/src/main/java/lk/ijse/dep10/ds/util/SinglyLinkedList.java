@@ -42,7 +42,11 @@ public class SinglyLinkedList {
     }
 
     public String get(int index) {
-        return "10";
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp.data + "";
     }
 
     public boolean contains(String input) {
